@@ -31,6 +31,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    buildFeatures{
+        dataBinding = true
+    }
 }
 
 dependencies {
@@ -52,6 +55,9 @@ dependencies {
     // Add the dependencies for any other desired Firebase products
     // https://firebase.google.com/docs/android/setup#available-libraries
 
-
+    // Firebase Realtime Database
     implementation("com.google.firebase:firebase-database")
+
+    //Fix Duplicate Class Error
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
 }
